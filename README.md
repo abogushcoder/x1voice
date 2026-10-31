@@ -4,7 +4,7 @@
 
 🔗 **Live:** [x1voice.com](https://x1voice.com) · Deployed to real restaurants handling live customer calls.
 
-> This repository is a technical overview of a production system I designed, built, and operate solo. The application source is private (it's a live business); this page documents the architecture and engineering. For a walkthrough or code sample, [reach out](https://linkedin.com/in/aebogush).
+> This repository is a technical overview of a production system I designed, built, and operate, leading a team of three other engineers. The application source is private (it's a live business); this page documents the architecture and engineering. For a walkthrough or code sample, [reach out](https://linkedin.com/in/aebogush).
 
 ![X1 Voice](docs/hero.jpg)
 
@@ -35,7 +35,7 @@ flowchart LR
 - **Real-time voice pipeline** — bridges Twilio telephony to an ElevenLabs conversational agent over WebSockets, with backend tool handlers (order create/modify/cancel, menu search, payment) and a fuzzy-matching resolver that maps spoken menu items to structured data.
 - **POS integration framework** — an adapter pattern with bi-directional menu sync and order routing across **7 providers** (Square, Clover, Deliverect, OrderCounter, OrderOut, PetPooja, Rista), plus OAuth flows, external-ID mapping, and per-provider sync logging.
 - **Usage-based billing** — Stripe metered + subscription billing with idempotent usage reporting and signed-webhook processing; SMS payment-link flow over Twilio (A2P 10DLC compliant).
-- **Tested & operated** — ~10,700 automated tests across 400+ test files; ~1,070 commits, maintained and deployed solo on AWS.
+- **Tested & operated** — ~10,700 automated tests across 400+ test files; ~1,070 commits, deployed on AWS.
 
 ## The adapter contract
 
